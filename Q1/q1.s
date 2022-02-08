@@ -1,10 +1,3 @@
-#  t  = s[2];
-#  t  = s[t];   // t = s[s[2]]
-#  m  = &p;
-#  *m = 9;
-#  m  = &s[s[8]];
-#  *m = *m + s[1];
-
 .pos 0x100
                 # ld vars into registers
                 ld $t, r0               # r0 = address of t
@@ -48,14 +41,14 @@ p:              .long 0xffffffff        # p = -1
 m:              .long 0xffffffff        # m = -1
 
 .pos 0x2000
-s:              .long 0x00000000        # s[0] = 9
-                .long 0x00000001        # s[1] = 8
-                .long 0x00000002        # s[2] = 7
-                .long 0x00000003        # s[3] = 6
-                .long 0x00000004        # s[4] = 5
-                .long 0x00000005        # s[5] = 4
-                .long 0x00000006        # s[6] = 3
-                .long 0x00000007        # s[7] = 2
-                .long 0x00000008        # s[8] = 1
-                .long 0x00000009        # s[9] = 0
+s:              .long 0x00000009        # s[0] = 9
+                .long 0x00000008        # s[1] = 8
+                .long 0x00000007        # s[2] = 7
+                .long 0x00000006        # s[3] = 6
+                .long 0x00000005        # s[4] = 5
+                .long 0x00000004        # s[5] = 4
+                .long 0x00000003        # s[6] = 3
+                .long 0x00000002        # s[7] = 2
+                .long 0x00000001        # s[8] = 1
+                .long 0x00000000        # s[9] = 0
                 
