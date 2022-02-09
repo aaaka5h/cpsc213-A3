@@ -19,11 +19,6 @@ int main (int argc, char** argv) {
   int   n;
   n = argc - 1;
   val = malloc(n * sizeof(*val));
-// Remove limit of argc = 5
-//   if (n > 4) {
-//     fprintf (stderr, "Static limit of 4 numbers\n");
-//     return -1;
-//   }
   for (int i=0; i<n; i++) {
     val[i] = strtol (argv[i+1], &ep, 10);
     if (*ep) {
