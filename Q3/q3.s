@@ -1,16 +1,3 @@
-# int  a;
-# int* p;
-# int  b[5];
-
-#  a = 3;
-#  p = &a;
-#  *p = *p - 1;
-#
-#  p = &b[0];
-#  p++;
-#  p[a] = b[a];
-#  *(p+3) = b[0];
-
 .pos 0x100     
                 # ld vars into registers
                 ld $a, r0               # r0 = address of a
